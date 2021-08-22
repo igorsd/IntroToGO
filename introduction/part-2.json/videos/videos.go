@@ -14,6 +14,7 @@ type video struct {
 }
 
 func getVideos() (videos []video) {
+
 	fileBytes, err := ioutil.ReadFile("./videos.json")
 
 	if err != nil {
@@ -35,9 +36,9 @@ func saveVideos(videos []video) {
 	if err != nil {
 		panic(err)
 	}
+
 	err = ioutil.WriteFile("./videos-updated.json", videoBytes, 0644)
 	if err != nil {
 		panic(err)
 	}
-
 }
