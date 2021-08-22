@@ -3,5 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello, world.")
+	customers := GetCustomers()
+
+	for _, customer := range customers {
+		fmt.Println(customer)
+	}
+
 }
